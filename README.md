@@ -31,3 +31,11 @@ python3 create_db.py <DB_FILENAME>.sql
 ```
 TG_TOKEN="<PASTE_TOKEN_HERE>" DB_NAME="<DB_FILENAME>.sql" python3 bot.py 
 ```
+
+## Presenting Time
+```
+cd Sxarbot
+python3.9 -m venv venv
+source venv/bin/activate
+TG_TOKEN="<PASTE_TOKEN_HERE>" DB_NAME="<DB_FILENAME>.sql" python3.9 bot.py 
+```
