@@ -34,7 +34,6 @@ TG_TOKEN="<PASTE_TOKEN_HERE>" DB_NAME="<DB_FILENAME>.sql" python3 bot.py
 
 ## Presenting Time
 ```
-conda create --name snakes python=3.9
 conda activate snakes
 cd Sxarbot
 source venv/bin/activate
