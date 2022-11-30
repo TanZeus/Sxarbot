@@ -37,6 +37,5 @@ def create_database(db_name):
     conn.execute(CREATE_CHATS_TABLE_SQL)
     conn.execute(CREATE_QUIZES_TABLE_SQL)
     conn.execute(CREATE_ANSWERS_TABLE_SQL)
-
-    if __name__ == '__main__':
-        create_database(sys.argv[1])
+if __name__ == '__main__':
+    create_database(sys.argv[1])
