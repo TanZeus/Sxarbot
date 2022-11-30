@@ -1,3 +1,17 @@
+#INITIAL Installation
+```
+id- root
+pass- toor
+sudo apt-get update && apt-get upgrade
+sudo apt install python3.9.14
+sudo apt install pip
+pip install venv
+sudo apt-get install python-venv
+
+```
+```
+no module found - pip install <module name>
+```
 # Use these commands in linux environment.
 ```
 git clone https://github.com/TanZeus/Sxarbot.git
