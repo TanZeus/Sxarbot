@@ -1,7 +1,6 @@
 import sys
 import sqlite3
 
-
 CREATE_CHATS_TABLE_SQL = """
 CREATE TABLE chats (
     id VARCHAR(128) PRIMARY KEY,
@@ -9,7 +8,6 @@ CREATE TABLE chats (
     frequency VARCHAR(16),
     language VARCHAR(16))
 """
-
 
 CREATE_QUIZES_TABLE_SQL = """
 CREATE TABLE quizes (
@@ -31,14 +29,11 @@ CREATE TABLE answers (
     FOREIGN KEY (quiz_id) REFERENCES quizes (id)
     ON DELETE CASCADE ON UPDATE NO ACTION)
 """
-
-
 def create_database(db_name):
     conn = sqlite3.connect(db_name)
     conn.execute(CREATE_CHATS_TABLE_SQL)
     conn.execute(CREATE_QUIZES_TABLE_SQL)
     conn.execute(CREATE_ANSWERS_TABLE_SQL)
 
-
-if __name__ == '__main__':
+    if __name__ == '__main__':
     create_database(sys.argv[1])
