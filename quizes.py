@@ -44,21 +44,6 @@ class HARSQuiz(BaseQuiz):
             'mild anxiety severity 👍',
             'mild to moderate anxiety severity 😐',
             'moderate to severe anxiety severity 😦'
-        ],
-        'it': [
-            'ansia lieve 👍',
-            'ansia da lieve a moderata 😐',
-            'ansia da moderata a grave 😦'
-        ],
-        'pt': [
-            'ansiedade leve 👍',
-            'ansiedade leve a moderada 😐',
-            'ansiedade moderada a severa 😦'
-        ],
-        'ru': [
-            'отсутствие тревоги 👍',
-            'средняя выраженность тревожного расстройства 😐',
-            'тяжелая тревога 😦'
         ]
     }
 
@@ -93,9 +78,6 @@ class MADRSQuiz(BaseQuiz):
 
     RESULTS = {
         'en': ['normal 👍', 'mild depression 😐', 'moderate depression 😔', 'severe depression 😨'],
-        'it': ['normale 👍', 'depressione lieve 😐', 'depressione moderata 😔', 'depressione grave 😨'],
-        'pt': ['normal 👍', 'depressão leve 😐', 'depressão moderada 😔', 'depressão severa 😨'],
-        'ru': ['норма 👍', 'слабая депрессия 😐', 'умеренная депрессия 😔', 'тяжелая депрессия 😨']
     }
 
     type_ = 'madrs'
@@ -118,9 +100,7 @@ class MADRSQuiz(BaseQuiz):
             description = self.RESULTS[self.lang][2]
         else:
             description = self.RESULTS[self.lang][3]
-        return '{}:\n{}/{}\n{}'.format(
-            'Результат' if self.lang == 'ru' else 'Result',
-            self.result, self.questions_count * 6, description)
+        return '{}:\n{}/{}\n{}'.format('Result',self.result, self.questions_count * 6, description)
 
     @property
     def questions_count(self):
