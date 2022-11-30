@@ -37,7 +37,6 @@ TG_TOKEN="<PASTE_TOKEN_HERE>" DB_NAME="<DB_FILENAME>.sql" python3 bot.py
 conda create --name snakes python=3.9
 conda activate snakes
 cd Sxarbot
-python3.9 -m venv venv
 source venv/bin/activate
 TG_TOKEN="<PASTE_TOKEN_HERE>" DB_NAME="<DB_FILENAME>.sql" python3.9 bot.py 
 ```
